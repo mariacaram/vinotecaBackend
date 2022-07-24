@@ -1,15 +1,22 @@
 const express = require('express')
 import morgan from "morgan";
 import cors from "cors";
+import path from "path";
 const app = express ();
 
 
 app.set ("port", process.env.PORT || 4000)
 
 app.listen(app.get("port"), ()=> {
-    console.log ("Estoy usando el puerto" +  app.get("port"))
+    console.log ("Estoy usando el puerto" +  app.get("port"));
+    console.log(path.join(__dirname,"../public"));
 })
+//configuracion midlewares
 
+app.use(morgan("dev"));
+app.use(cors());
+app.use(express.json());
+express.urlencoded({ extended: true });
 
 // crear rutas
 
@@ -18,7 +25,8 @@ app.delete("/borrarproducto", (req,res) => {res.send ("esto es una peticion para
 
 console.log("Hola Mundo");
 
-app.use(morgan("dev"));
-app.use(cors());
-app.use(express.json());
-express.urlencoded({ extended: true });
+
+
+//configurar el bienvenida.html:
+
+app.use(express.static(path.join(__dirname, "../public")));
