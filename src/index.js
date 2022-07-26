@@ -3,7 +3,7 @@ import morgan from "morgan";
 import cors from "cors";
 import path from "path";
 import routes from "./routes/producto.routes";
-
+import "./database"
 const app = express ();
 
 
