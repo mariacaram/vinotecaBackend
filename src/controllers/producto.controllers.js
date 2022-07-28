@@ -31,6 +31,7 @@ productoCtrl.nuevoProducto = async (req, res) => {
     const productoNuevo = new Producto({
       nombreProducto: req.body.nombreProducto,
       precioProducto: req.body.precioProducto,
+      foto: req.body.foto,
       categoria: req.body.categoria,
     });
     console.log(productoNuevo);
