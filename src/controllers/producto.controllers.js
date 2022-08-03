@@ -18,7 +18,7 @@ productoCtrl.modificarProducto = async(req, res) => {
         await Producto.findByIdAndUpdate(req.params.id, req.body)
         res.status(200).json({mensaje: "Se modificó el producto"})
     } catch (error) {
-        res.status(404);        
+      res.status(400).json({ mensaje: "Error al crear el producto: ", error});      
     }
 
 };
