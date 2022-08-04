@@ -22,6 +22,7 @@ express.urlencoded({ extended: true });
 app.use(express.static(path.join(__dirname, "../public")));
 
 app.use("/vinoteca", routes);
+app.use('/usuarios', usuariosRoutes);
 // crear rutas
 
 app.get("/", (req,res) => {res.send ("esto es una repsuesta desde el backend")})
