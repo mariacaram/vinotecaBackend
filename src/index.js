@@ -3,7 +3,9 @@ import morgan from "morgan";
 import cors from "cors";
 import path from "path";
 import routes from "./routes/producto.routes";
+import routes from "./routes/usuario.routes";
 import "./database"
+
 const app = express ();
 
 
@@ -22,7 +24,8 @@ express.urlencoded({ extended: true });
 app.use(express.static(path.join(__dirname, "../public")));
 
 app.use("/vinoteca", routes);
-app.use('/usuarios', usuariosRoutes);
+app.use("/usuarios", routes);
+
 // crear rutas
 
 app.get("/", (req,res) => {res.send ("esto es una repsuesta desde el backend")})
