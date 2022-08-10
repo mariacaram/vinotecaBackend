@@ -1,10 +1,10 @@
 import { Router } from "express";
 import usuarioCtrl from "../controllers/usuarioController";
 
-const router = Router()
+const userRoutes = Router()
 
 
-router.route("/").get (usuarioCtrl.listarUsuario)
-router.route("/").post (usuarioCtrl.nuevoUsuario)
-router.route("/:id").get(usuarioCtrl.obtenerUsuario).delete(usuarioCtrl.borrarUsuario).put(usuarioCtrl.modificarUsuario);
-export default router
+userRoutes.route("/").get (usuarioCtrl.listarUsuario)
+userRoutes.route("/").post (usuarioCtrl.nuevoUsuario)
+userRoutes.route("/:id").get(usuarioCtrl.obtenerUsuario).delete(usuarioCtrl.borrarUsuario).put(usuarioCtrl.modificarUsuario);
+export default userRoutes

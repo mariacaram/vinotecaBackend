@@ -2,8 +2,8 @@ import express from "express";
 import morgan from "morgan";
 import cors from "cors";
 import path from "path";
-import routes from "./routes/producto.routes";
-import routes from "./routes/usuario.routes";
+import router from "./routes/producto.routes";
+import userRoutes from "./routes/usuario.routes";
 import "./database"
 
 const app = express ();
@@ -23,8 +23,7 @@ app.use(express.json());
 express.urlencoded({ extended: true });
 app.use(express.static(path.join(__dirname, "../public")));
 
-app.use("/vinoteca", routes);
-app.use("/usuarios", routes);
+app.use("/vinoteca", router , userRoutes );
 
 // crear rutas
 
