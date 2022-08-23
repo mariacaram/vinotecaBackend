@@ -30,15 +30,14 @@ usuarioCtrl.nuevoUsuario = async (req, res) => {
 
     const UsuarioNuevo = new Usuario({
       nombreUsuario: req.body.nombreUsuario,
-      emailUsuario: req.body.emailUsuario,
-      fotoUsuario: req.body.fotoUsuario,
-      rolUsuario: req.body.rolUsuario,
-      passwordUsuario: req.body.passwordUsuario,
+      mailUsuario: req.body.mailUsuario,
+      apellidoUsuario: req.body.apellidoUsuario,
+      dniUsuario: req.body.dniUsuario,
     });
-    console.log(usuarioNuevo);
+    console.log(UsuarioNuevo);
 
     //Guardar en base de datos
-    await usuarioNuevo.save();
+    await UsuarioNuevo.save();
     res.status(201).json({ mensaje: "Usuario creado correctamente" });
   } catch (error) {
     console.log(error);
