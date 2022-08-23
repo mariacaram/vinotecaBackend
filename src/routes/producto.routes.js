@@ -4,7 +4,7 @@ import productoCtrl from "../controllers/producto.controllers";
 const router = Router()
 
 
-router.route("/").get (productoCtrl.listarProducto)
-router.route("/").post (productoCtrl.nuevoProducto)
-router.route("/:id").get(productoCtrl.obtenerProducto).delete(productoCtrl.borrarProducto).put(productoCtrl.modificarProducto);
+router.route("/productos").get (productoCtrl.listarProducto)
+router.route("/productos").post (productoCtrl.nuevoProducto)
+router.route("/productos/:id").get(productoCtrl.obtenerProducto).delete(productoCtrl.borrarProducto).put(productoCtrl.modificarProducto);
 export default router
