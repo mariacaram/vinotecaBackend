@@ -22,6 +22,10 @@ const UsuariosSchema = mongoose.Schema({
         trim: true,
         unique: true,
     },
+    Rol: {
+        type: Text,
+        trim: true,
+    },
 });
 
 module.exports = mongoose.model('Usuario', UsuariosSchema);
