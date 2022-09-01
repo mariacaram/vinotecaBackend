@@ -23,6 +23,12 @@ const UsuariosSchema = mongoose.Schema({
         unique: true,
     },
 
+    password: {
+        type: String,
+        required: true,
+        trim: true,
+    },
+
     rol: {
        type: String,
        default: "user",

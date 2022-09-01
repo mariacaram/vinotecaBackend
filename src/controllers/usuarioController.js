@@ -33,6 +33,7 @@ usuarioCtrl.nuevoUsuario = async (req, res) => {
       mailUsuario: req.body.mailUsuario,
       apellidoUsuario: req.body.apellidoUsuario,
       dniUsuario: req.body.dniUsuario,
+      password: req.body.password,
     });
     console.log(UsuarioNuevo);
 
