@@ -30,7 +30,7 @@ app.use("/vinoteca", router , userRoutes );
 app.get("/", (req,res) => {res.send ("esto es una repsuesta desde el backend")})
 app.delete("/borrarproducto", (req,res) => {res.send ("esto es una peticion para borrar")})
 
-console.log("Hola Mundo");
+console.log("Hola Mundo como estan");
 
 
 
