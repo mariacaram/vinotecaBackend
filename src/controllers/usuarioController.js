@@ -64,6 +64,7 @@ usuarioCtrl.obtenerUsuario = async (req, res) => {
     }
   };
 
+  
 
 export default usuarioCtrl;
 
